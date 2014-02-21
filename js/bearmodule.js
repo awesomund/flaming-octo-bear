@@ -4,7 +4,7 @@ angular.module('flamingOctoBear', ['ngRoute'])
 	$routeProvider
 	.when('/bearlist', {
 		templateUrl: '../html/bearlist.html',
-		controller: 'bearListController',
+		controller: 'BearListController',
 	})
 	.otherwise({redirectTo: '/',});
 });

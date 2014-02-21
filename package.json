@@ -1,0 +1,10 @@
+{
+  "name"         : "flaming-octo-bear",
+  "version"      : "0.0.0",
+  "description"  : "Simple application.",
+  "main"         : "server.js",
+  "author"       : "Osmund",
+  "dependencies" : {
+    "express"    : "~3.4.4"
+    }
+  }
