@@ -1,0 +1,18 @@
+<div>
+	<label>Bear Search:</label>
+	<input type="text" ng-model="searchTerm">
+
+	<p>
+		<ul>
+			<li ng-repeat="bear in bearsArray | filter:searchTerm">
+				{{bear}}
+			</li>
+		</ul>
+	</p>
+
+	<p>
+		<label>Add bear:</label>
+		<input type="text" ng-model="newBearName">
+		<input type="submit" ng-click="addBear()">
+	</p>
+</div>
