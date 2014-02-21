@@ -1,6 +1,6 @@
-var app = angular.module('flamingOctoBear', []);
+angular.module('flamingOctoBear', [])
 
-app.controller('BearListController', function($rootScope, $scope){
+.controller('BearListController', function($rootScope, $scope){
 
 	$scope.bearString = "Bear!";
 

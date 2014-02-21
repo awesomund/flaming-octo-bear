@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="css/ie6.css"/><![endif]-->
 </head>
 
-<body id="index" class="home" ng-controller="BearListController">
+<body id="index" class="home">
 
 	<h1>
 		Flaming Octo Bear!
@@ -26,35 +26,40 @@
 		Hey! Welcome to the bear site! Enjoy the ng-view!
 	</p>
 
-	<div>
-	<label>Bear Search:</label>
-	<input type="text" ng-model="searchTerm">
+	<div style="background-color: yellow;">
+		ng-view should go here:<br>
+		---------- <br>
+		<div ng-view>
+				<!-- template content appears here -->
+		</div>
+		---------- <br>
+	</div>
 
-	<p>
-		{{bearString}}
-	</p>
+	<div ng-controller="BearListController">
+		<label>Bear Search:</label>
+		<input type="text" ng-model="searchTerm">
 
-	<p>
-		<ul>
-			<li ng-repeat="bear in bearsArray | filter:searchTerm">
-				{{bear}}
-			</li>
-		</ul>
-	</p>
+		<p>
+			<ul>
+				<li ng-repeat="bear in bearsArray | filter:searchTerm">
+					{{bear}}
+				</li>
+			</ul>
+		</p>
 
-	<p>
-		<label>Add bear:</label>
-		<input type="text" ng-model="newBearName">
-		<input type="submit" ng-click="addBear()">
-	</p>
-</div>
+		<p>
+			<label>Add bear:</label>
+			<input type="text" ng-model="newBearName">
+			<input type="submit" ng-click="addBear()">
+		</p>
+	</div>
 
 	<!-- Resources -->
-	<script type="text/javascript" src="/js/resources/angular.min.js"></script>
+	<script type="text/javascript" src="/js/resources/angular-1.2.9.min.js"></script>
 	<script type="text/javascript" src="/js/resources/angular-route-1.2.9.min.js"></script>
 
 	<!-- Angular Modules -->
-	<script type="text/javascript" src="/js/bearmodule.js"></script>
+	<script type="text/javascript" src="/js/routing.js"></script>
 
 	<!-- Angular Controllers -->
 	<script type="text/javascript" src="/js/controllers/bearlistcontroller.js"></script>
