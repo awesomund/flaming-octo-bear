@@ -1,4 +1,4 @@
-angular.module('flamingOctoBear', [])
+angular.module('flamingOctoBear')
 
 .controller('BearListController', function($rootScope, $scope){
 

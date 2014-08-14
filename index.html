@@ -26,32 +26,16 @@
 		Hey! Welcome to the bear site! Enjoy the ng-view!
 	</p>
 
+	<a href="#bearlist">Bear List</a>
+	<a href="#view2">View 2</a>
+
 	<div style="background-color: yellow;">
 		ng-view should go here:<br>
-		---------- <br>
-		<div ng-view>
-				<!-- template content appears here -->
-		</div>
-		---------- <br>
+		<div ng-view></div>
 	</div>
 
-	<div ng-controller="BearListController">
-		<label>Bear Search:</label>
-		<input type="text" ng-model="searchTerm">
-
-		<p>
-			<ul>
-				<li ng-repeat="bear in bearsArray | filter:searchTerm">
-					{{bear}}
-				</li>
-			</ul>
-		</p>
-
-		<p>
-			<label>Add bear:</label>
-			<input type="text" ng-model="newBearName">
-			<input type="submit" ng-click="addBear()">
-		</p>
+	<div>
+		This is the bottom of the page.
 	</div>
 
 	<!-- Resources -->
